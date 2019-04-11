@@ -49,5 +49,6 @@ services:
       - /mnt/nfs/nfsdlo/$STACK_NETWORK/$STACK_SERVICE-$STACK_VERSION/src/$STACK_SERVICE:/app
 
 networks:
-  $STACK_NETWORK:
+  #$STACK_NETWORK:
+  dev-net:
     external: true
