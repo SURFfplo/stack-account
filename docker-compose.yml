@@ -19,9 +19,9 @@ services:
       #- $PWD/conf:/etc/nginx/conf.d
       #- $PWD/html:/usr/share/nginx/html
       #- $PWD/src/$STACK_SERVICE:/var/$STACK_SERVICE
-      - /mnt/nfs/nfsdlo/$STACK_NETW0RK/$STACK_SERVICE-$STACK_VERSION/conf:/etc/nginx/conf.d
-      - /mnt/nfs/nfsdlo/$STACK_NETW0RK/$STACK_SERVICE-$STACK_VERSION/html:/usr/share/nginx/html
-      - /mnt/nfs/nfsdlo/$STACK_NETW0RK/$STACK_SERVICE-$STACK_VERSION/src/$STACK_SERVICE:/var/$STACK_SERVICE
+      - /mnt/nfs/nfsdlo/$STACK_NETWORK/$STACK_SERVICE-$STACK_VERSION/conf:/etc/nginx/conf.d
+      - /mnt/nfs/nfsdlo/$STACK_NETWORK/$STACK_SERVICE-$STACK_VERSION/html:/usr/share/nginx/html
+      - /mnt/nfs/nfsdlo/$STACK_NETWORK/$STACK_SERVICE-$STACK_VERSION/src/$STACK_SERVICE:/var/$STACK_SERVICE
   php:
     #image: php-fpm:0.1
     image: 192.87.106.18:56001/php-fpm:0.1
@@ -33,7 +33,7 @@ services:
       - $STACK_NETWORK
     volumes:
       #- $PWD/src/$STACK_SERVICE:/var/$STACK_SERVICE
-      - /mnt/nfs/nfsdlo/$STACK_NETW0RK/$STACK_SERVICE-$STACK_VERSION/src/$STACK_SERVICE:/var/$STACK_SERVICE
+      - /mnt/nfs/nfsdlo/$STACK_NETWORK/$STACK_SERVICE-$STACK_VERSION/src/$STACK_SERVICE:/var/$STACK_SERVICE
   composer:
     #image: composer:0.1
     image: 192.87.106.18:56001/composer:0.1
@@ -46,8 +46,8 @@ services:
       - $STACK_NETWORK
     volumes:
       #- $PWD/src/$STACK_SERVICE:/app
-      - /mnt/nfs/nfsdlo/$STACK_NETW0RK/$STACK_SERVICE-$STACK_VERSION/src/$STACK_SERVICE:/app
+      - /mnt/nfs/nfsdlo/$STACK_NETWORK/$STACK_SERVICE-$STACK_VERSION/src/$STACK_SERVICE:/app
 
 networks:
-  dev-net:
+  $STACK_NETWORK:
     external: true
