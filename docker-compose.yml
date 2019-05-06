@@ -106,3 +106,7 @@ secrets:
   account_db_dba_password:
     external: true
 
+configs:
+  account_my_cnf:
+    external: true
+
