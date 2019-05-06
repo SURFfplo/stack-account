@@ -13,6 +13,14 @@ services:
       replicas: 1
       restart_policy:
         condition: on-failure
+    secrets:
+      - account_db_dba_password
+    environment:
+      DB_HOST: 'db'
+      DB_USER: 'dba'
+      DB_NAME: 'account'
+      DB_PASS_FILE: /run/secrets/account_db_dba_password
+      DB_PORT: 3307
     networks:
       - $STACK_NETWORK
     volumes:
@@ -50,6 +58,38 @@ services:
     volumes:
       #- $PWD/src/$STACK_SERVICE:/app
       - /mnt/nfs/nfsdlo/$STACK_NETWORK/account-0.1/src/$STACK_SERVICE:/app
+  db:
+    #image: mysql:5.7 
+    image: 192.87.106.18:56001/mysql:0.1
+    configs:
+      - source: my_cnf
+        target: /etc/mysql/conf.d/my.cnf
+    secrets:
+      - account_db_root_password
+      - account_db_dba_password
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.role == manager]
+      resources:
+        reservations:
+          memory: 128M
+        limits:
+          memory: 256M
+    ports:
+      - 3307:3306
+    environment:
+      MYSQL_USER: dba
+      MYSQL_DATABASE: account 
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/account_db_root_password
+      MYSQL_PASSWORD_FILE: /run/secrets/account_db_dba_password
+    networks:
+      - dev-net
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      #- .data/mysql:/var/lib/mysql
+      - /mnt/nfs/nfsdlo/$STACK_NETWORK/account-0.1/data/mysql:/var/lib/mysql
+
 
 networks:
   #$STACK_NETWORK:
