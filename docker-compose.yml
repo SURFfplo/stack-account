@@ -62,7 +62,7 @@ services:
     #image: mysql:5.7 
     image: 192.87.106.18:56001/mysql:0.1
     configs:
-      - source: my_cnf
+      - source: account_my_cnf
         target: /etc/mysql/conf.d/my.cnf
     secrets:
       - account_db_root_password

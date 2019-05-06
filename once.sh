@@ -13,6 +13,6 @@ printf $dbdbapwd | docker secret create account_db_dba_password -
 echo done...
 
 echo "Create config for mysql container:"
-docker config create my_cnf config_mysql/my.cnf
+docker config create account_my_cnf config_mysql/my.cnf
 echo done...
 
