@@ -39,17 +39,17 @@ services:
     environment:
       APP_ENV: "dev"
       APP_SECRET: "d0e0b906b0b783794908ed04e2a16cbf"
-      BASE_URL="http://account.dlo.surfnet.nl/"
+      BASE_URL: "http://account.dlo.surfnet.nl/"
       PORTAL_URL: "http://www.dlo.surfnet.nl"
       ENTITY_ID_SP: "http://idp.dlo.surfnet.nl/module.php/saml/sp/metadata.php/default-sp"
-      ASSERTION_CONSUMER_SERVICE_SP="http://idp.dlo.surfnet.nl/module.php/saml/sp/saml2-acs.php/default-sp"
-      SINGLE_LOGOUT_SERVICE_SP="http://idp.dlo.surfnet.nl/module.php/saml/sp/saml2-logout.php/default-sp"
-      UID="uid"
-      GIVENNAME="givenName"
-      SN="sn"
-      EMAIL="mail"
-      EPPN="eppn"
-      #DATABASE_URL=mysql://root:root@localhost:3306/account
+      ASSERTION_CONSUMER_SERVICE_SP: "http://idp.dlo.surfnet.nl/module.php/saml/sp/saml2-acs.php/default-sp"
+      SINGLE_LOGOUT_SERVICE_SP: "http://idp.dlo.surfnet.nl/module.php/saml/sp/saml2-logout.php/default-sp"
+      UID: "uid"
+      GIVENNAME: "givenName"
+      SN: "sn"
+      EMAIL: "mail"
+      EPPN: "eppn"
+      #DATABASE_URL: mysql://root:root@localhost:3306/account
       #DB_HOST: 'db'
       #DB_USER: 'dba'
       #DB_NAME: 'account'
