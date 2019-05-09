@@ -14,6 +14,8 @@ services:
       replicas: 1
       restart_policy:
         condition: on-failure
+    environment:
+      ENTITY_ID: "http://idp.dlo.surfnet.nl/module.php/saml/sp/metadata.php/default-sp"
     networks:
       - $STACK_NETWORK
     volumes:
