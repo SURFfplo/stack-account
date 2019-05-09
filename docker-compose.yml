@@ -14,9 +14,6 @@ services:
       replicas: 1
       restart_policy:
         condition: on-failure
-    environment:
-      APP_ENV: "prod"
-      ENTITY_ID: "http://idp.dlo.surfnet.nl/module.php/saml/sp/metadata.php/default-sp"
     networks:
       - $STACK_NETWORK
     volumes:
@@ -40,6 +37,8 @@ services:
     secrets:
       - account_db_dba_password
     environment:
+      APP_ENV: "prod"
+      ENTITY_ID: "http://idp.dlo.surfnet.nl/module.php/saml/sp/metadata.php/default-sp"
       DB_HOST: 'db'
       DB_USER: 'dba'
       DB_NAME: 'account'
