@@ -29,7 +29,7 @@ services:
 
   php:
     #image: php-fpm:0.1
-    image: 192.87.106.18:56001/php-fpm:0.1
+    image: 192.87.106.18:56001/php-fpm:0.2
     deploy:
       replicas: 1
       restart_policy:
