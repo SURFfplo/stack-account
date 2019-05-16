@@ -1,22 +1,12 @@
 #!/bin/sh
 
+# wait until the rest is finished
 sleep 15
 
 set -e
 
-# ### CONFIGURE DOCTRINE ###
-
-# get admin password
-MY_PASSWORD=admin
-if [ -f "$DB_PASS_FILE" ]
-then
-	MY_PASSWORD=`cat $DB_PASS_FILE`
-fi
-
-# set password
-export DB_PASS=$MY_PASSWORD
-
-# create schema
+# create doctrine schema
+# TODO: this does not compute... no php...
 cd /var/account
 bin/console doctrine:schema:create
 
