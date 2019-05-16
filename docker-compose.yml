@@ -55,7 +55,8 @@ services:
       GIVENNAME: "givenName"
       SN: "sn"
       EMAIL: "mail"
-      EPPN: "eduPersonPrincipalName"
+      #EPPN: "eduPersonPrincipalName"
+      EPPN: "uid"
       # database
       #DATABASE_URL: mysql://root:root@localhost:3306/account
       #DB_HOST: 'db'
