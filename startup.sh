@@ -1,5 +1,7 @@
 #!/bin/sh
 
+sleep 15
+
 set -e
 
 # ### CONFIGURE DOCTRINE ###
