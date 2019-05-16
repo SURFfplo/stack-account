@@ -37,21 +37,26 @@ services:
     secrets:
       - account_db_dba_password
     environment:
+      # app
       APP_ENV: "dev"
       APP_SECRET: "d0e0b906b0b783794908ed04e2a16cbf"
-      BASE_URL: "http://account.dlo.surfnet.nl/"
       PORTAL_URL: "http://www.dlo.surfnet.nl"
+      # saml
+      BASE_URL: "http://account.dlo.surfnet.nl/"
       ENTITY_ID: "http://idp.dlo.surfnet.nl/saml2/idp/metadata.php"
       SINGLE_SIGN_ON_SERVICE: "http://idp.dlo.surfnet.nl/saml2/idp/SSOService.php"
       SINGLE_LOGOUT_SERVICE: "http://idp.dlo.surfnet.nl/saml2/idp/SingleLogoutService.php"
       ENTITY_ID_SP: "http://account.dlo.surfnet.nl/saml/metadata"
       ASSERTION_CONSUMER_SERVICE_SP: "http://account.dlo.surfnet.nl/saml/acs"
       SINGLE_LOGOUT_SERVICE_SP: "http://account.dlo.surfnet.nl/saml/logout"
+      IDP_CERT: "00:B8:D9:22:1D:50:BE:DB:4D:1F:6E:B2:4B:66:59:BB:3B:D1:87:39"
+      # attributes
       UID: "uid"
       GIVENNAME: "givenName"
       SN: "sn"
       EMAIL: "mail"
-      EPPN: "eppn"
+      EPPN: "eduPersonPrincipalName"
+      # database
       #DATABASE_URL: mysql://root:root@localhost:3306/account
       #DB_HOST: 'db'
       #DB_USER: 'dba'
