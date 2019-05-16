@@ -17,7 +17,7 @@ fi
 export DB_PASS=$MY_PASSWORD
 
 # create schema
-cd /data
+cd /var/account
 bin/console doctrine:schema:create
 
 exec "$@"

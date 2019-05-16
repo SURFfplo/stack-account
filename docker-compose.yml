@@ -70,6 +70,7 @@ services:
     volumes:
       #- $PWD/src/$STACK_SERVICE:/var/$STACK_SERVICE
       - /mnt/nfs/nfsdlo/$STACK_NETWORK/account-0.1/src/$STACK_SERVICE:/var/$STACK_SERVICE
+      - $PWD/startup.sh:/startup.sh
 
   composer:
     #image: composer:0.1
@@ -136,7 +137,7 @@ services:
       - $STACK_NETWORK
     volumes:
       #- $PWD/src/$STACK_SERVICE:/app
-      - /mnt/nfs/nfsdlo/$STACK_NETWORK/account-0.1/src/$STACK_SERVICE:/data
+      - /mnt/nfs/nfsdlo/$STACK_NETWORK/account-0.1/src/$STACK_SERVICE:/var/$STACK_SERVICE
       - $PWD/startup.sh:/startup.sh
 
 networks:
