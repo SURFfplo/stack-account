@@ -18,3 +18,6 @@ mv $STACK_REPOSITORY $STACK_SERVICE
 cd ..
 
 # config
+
+# status
+cp html/status.php src/account/public
