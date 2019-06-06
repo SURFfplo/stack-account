@@ -5,6 +5,10 @@ export STACK_SERVICE=account
 export STACK_VERSION=0.1
 export STACK_REPOSITORY=FPLO-Account
 
+# delete previous version
+# note: geen rollback!
+docker stack rm $STACK_SERVICE
+
 # init
 ./init.sh
 
