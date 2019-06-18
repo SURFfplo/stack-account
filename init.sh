@@ -20,4 +20,5 @@ cd ..
 # config
 
 # status
-cp html/status.php src/account/public
+cp html/status.php src/$STACK_SERVICE/public
+
