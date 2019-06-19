@@ -62,7 +62,7 @@ services:
       DB_PORT: 3306
       # startup
       PHP_STACK_SERVICE: $STACK_SERVICE
-      PHP_DB: 'portal'
+      PHP_DB: 'account'
     networks:
       - $STACK_NETWORK
     volumes:
