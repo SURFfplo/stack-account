@@ -47,7 +47,7 @@ services:
       ENTITY_ID_SP: ${STACK_NETWORK_URL}/saml/metadata
       ASSERTION_CONSUMER_SERVICE_SP: ${STACK_NETWORK_URL}/saml/acs
       SINGLE_LOGOUT_SERVICE_SP: ${STACK_NETWORK_URL}/saml/logout
-      IDP_CERT: "00:B8:D9:22:1D:50:BE:DB:4D:1F:6E:B2:4B:66:59:BB:3B:D1:87:39"
+      IDP_CERT: "D9:BD:30:11:E7:1D:12:FA:92:E9:3F:95:D6:C4:24:B5:CD:D3:6F:AF"
       # attributes
       UID: "uid"
       GIVENNAME: "givenName"
