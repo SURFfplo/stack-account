@@ -54,6 +54,7 @@ services:
       SN: "sn"
       EMAIL: "mail"
       EPPN: "nameId"
+      SCHACHOME: "schacHomeOrganization"
       #EPPN: "eduPersonPrincipalName"
       #EPPN: "uid"
       # database
