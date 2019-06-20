@@ -30,16 +30,19 @@ if [ $NETWORK == "dev-net" ]; then
         export STACK_NETWORK_URL=https://account.dev.dlo.surf.nl
         export STACK_NETWORK_URL_IDP=https://idp.dev.dlo.surf.nl
         export STACK_NETWORK_URL_PORTAL=https://www.dev.dlo.surf.nl
+        export STACK_NETWORK_URL_NODERED=http://192.87.106.21:57299/
 fi
 if [ $NETWORK == "test-net" ]; then
         export STACK_NETWORK_URL=https://account.test.dlo.surf.nl
         export STACK_NETWORK_URL_IDP=https://idp.test.dlo.surf.nl
         export STACK_NETWORK_URL_PORTAL=https://www.test.dlo.surf.nl
+        export STACK_NETWORK_URL_NODERED=http://192.87.106.21:58299/
 fi
 if [ $NETWORK == "exp-net" ]; then
         export STACK_NETWORK_URL=https://account.experimenteer.dlo.surf.nl
         export STACK_NETWORK_URL_IDP=https://idp.experimenteer.dlo.surf.nl
         export STACK_NETWORK_URL_PORTAL=https://www.experimenteer.dlo.surf.nl
+        export STACK_NETWORK_URL_NODERED=http://192.87.106.21:59299/
 fi
 
 # source

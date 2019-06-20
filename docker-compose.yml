@@ -38,6 +38,7 @@ services:
       APP_ENV: "dev"
       APP_SECRET: "d0e0b906b0b783794908ed04e2a16cbf"
       PORTAL_URL: $STACK_NETWORK_URL_PORTAL
+      NODERED_URL: $STACK_NETWORK_URL_NODERED
       # saml
       BASE_URL: $STACK_NETWORK_URL
       ENTITY_ID: ${STACK_NETWORK_URL_IDP}/saml2/idp/metadata.php
@@ -52,8 +53,8 @@ services:
       GIVENNAME: "givenName"
       SN: "sn"
       EMAIL: "mail"
-      #EPPN: "eduPersonPrincipalName"
-      EPPN: "uid"
+      EPPN: "eduPersonPrincipalName"
+      #EPPN: "uid"
       # database
       DB_HOST: ${STACK_SERVICE}_db
       DB_USER: 'dba'
