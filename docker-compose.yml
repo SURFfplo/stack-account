@@ -53,7 +53,7 @@ services:
       GIVENNAME: "givenName"
       SN: "sn"
       EMAIL: "mail"
-      EPPN: "NameId"
+      EPPN: "nameId"
       #EPPN: "eduPersonPrincipalName"
       #EPPN: "uid"
       # database
