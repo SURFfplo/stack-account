@@ -53,7 +53,8 @@ services:
       GIVENNAME: "givenName"
       SN: "sn"
       EMAIL: "mail"
-      EPPN: "eduPersonPrincipalName"
+      EPPN: "NameId"
+      #EPPN: "eduPersonPrincipalName"
       #EPPN: "uid"
       # database
       DB_HOST: ${STACK_SERVICE}_db
