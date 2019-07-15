@@ -89,7 +89,6 @@ services:
     image: 192.87.106.18:56001/composer:0.1
     command: install
     deploy:
-    deploy:
       mode: replicated
       replicas: 1
       resources:
@@ -113,17 +112,17 @@ services:
     secrets:
       - account_db_root_password
       - account_db_dba_password
-    deploy:
-      mode: replicated
-      replicas: 1
-      resources:
-        limits:
-          cpus: '1.0'
-          memory: 512M
-      restart_policy:
-        condition: any
-      placement:
-        constraints: [node.role == manager]
+#    deploy:
+#      mode: replicated
+#      replicas: 1
+#      resources:
+#        limits:
+#          cpus: '1.0'
+#          memory: 512M
+#      restart_policy:
+#        condition: any
+#      placement:
+#        constraints: [node.role == manager]
     environment:
       MYSQL_USER: dba
       MYSQL_DATABASE: account 
